@@ -3,16 +3,27 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SelectComponent } from './select/select.component';
+import { PresentComponent } from './present/present.component';
+import {HttpModule} from '@angular/http';
+import {ReactiveFormsModule} from '@angular/forms';
+import {TripService} from './services/trip.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SelectComponent,
+    PresentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    TripService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

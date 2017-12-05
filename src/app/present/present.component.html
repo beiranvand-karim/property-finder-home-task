@@ -1,0 +1,40 @@
+
+
+<div>
+  <ul>
+    <li *ngFor="let trip of cheapestPath$ | async">
+      <div class="container">
+        <div class="left">
+          <h3>{{trip.departure}} > {{trip.arrival}}</h3>
+          <h4><strong>{{trip.transport}}</strong> <i>{{trip.reference}} for {{trip.duration.h}}h{{trip.duration.m}}</i> </h4>
+        </div>
+        <div class="right">
+          <h3>{{trip.cost - trip.discount / 100 * trip.cost}}&euro;</h3>
+        </div>
+
+      </div>
+
+    </li>
+
+    <li>
+
+      <div class=" total-container" *ngIf="(cheapestPath$ | async) !== null && (cheapestPath$ | async).length > 0">
+
+        <div class="start">
+          <h3>Total</h3>
+        </div>
+        <div class="middle">
+          <h4>{{reduceTime(cheapestPath$ | async)}}</h4>
+        </div>
+        <div class="end">
+          <h3>{{reduceCost(cheapestPath$ | async)}}&euro;</h3>
+        </div>
+
+      </div>
+
+    </li>
+
+    <button routerLink="/">Reset</button>
+
+  </ul>
+</div>

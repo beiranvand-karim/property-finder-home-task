@@ -1,0 +1,78 @@
+@import "../../assets/variables";
+
+div {
+
+  display: flex;
+  justify-content: center;
+
+  > ul {
+
+    list-style: none;
+
+    > li {
+
+      + li {
+        margin-top: 10px;
+      }
+
+      > div.container {
+        background-color: $gray-background-color;
+        width: $main-width;
+
+        > div.left {
+          width: 80%;
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+
+          > h3 {
+            margin: 0;
+          }
+        }
+
+        > div.right {
+          width: 20%;
+
+
+          > h3 {
+            margin-top: 0;
+          }
+
+        }
+
+      }
+
+
+      > div.total-container {
+        background-color: $total-gray-background-color;
+        width: $main-width;
+        display: flex;
+
+
+        > div.start {
+          width: 34%;
+
+        }
+
+        > div.middle {
+          width: 33%;
+        }
+
+        > div.end {
+          width: 33%;
+        }
+      }
+
+    }
+
+    > button {
+      margin-top: 30px;
+      width: 100%;
+      height: 30px;
+      background-color: #009249;
+      border: transparent;
+      border-radius: 4px;
+      min-width: $main-width;
+    }
+  }
+}

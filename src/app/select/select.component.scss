@@ -1,0 +1,46 @@
+
+
+div.path {
+
+  display: flex;
+  justify-content: center;
+  height:100vh;
+  align-items: center;
+
+  > form.container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    > select {
+      height: 30px;
+      border: transparent;
+      outline: none;
+
+      + select {
+        margin-top: 20px;
+      }
+    }
+
+
+    > div.options {
+
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+
+    > button {
+      height: 30px;
+      margin-top: 30px;
+      background-color: #009249;
+      border: transparent;
+      border-radius: 4px;
+    }
+
+  }
+
+
+
+}

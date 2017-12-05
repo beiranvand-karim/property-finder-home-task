@@ -1,0 +1,64 @@
+
+
+
+<div class="path">
+
+
+
+  <form class="container" [formGroup]="form" (ngSubmit)="onFormSubmit()">
+
+
+    <select name="" id="" formControlName="departure">
+      <option value="">From</option>
+      <option value="Amsterdam">Amsterdam</option>
+      <option value="London">London</option>
+      <option value="Paris">Paris</option>
+      <option value="Warsaw">Warsaw</option>
+      <option value="Brussels">Brussels</option>
+      <option value="Stockholm">Stockholm</option>
+      <option value="Prague">Prague</option>
+      <option value="Moscow">Moscow</option>
+      <option value="Madrid">Madrid</option>
+      <option value="Geneva">Geneva</option>
+      <option value="Geneva">Geneva</option>
+      <option value="Kiev">Kiev</option>
+      <option value="Lisbon">Lisbon</option>
+      <option value="Rome">Rome</option>
+      <option value="Athens">Athens</option>
+      <option value="Istanbul">Istanbul</option>
+    </select>
+
+
+    <select name="" id="" formControlName="arrival">
+      <option value="">To</option>
+      <option value="Amsterdam">Amsterdam</option>
+      <option value="London">London</option>
+      <option value="Paris">Paris</option>
+      <option value="Warsaw">Warsaw</option>
+      <option value="Brussels">Brussels</option>
+      <option value="Stockholm">Stockholm</option>
+      <option value="Prague">Prague</option>
+      <option value="Moscow">Moscow</option>
+      <option value="Madrid">Madrid</option>
+      <option value="Geneva">Geneva</option>
+      <option value="Budapest">Budapest</option>
+      <option value="Kiev">Kiev</option>
+      <option value="Lisbon">Lisbon</option>
+      <option value="Rome">Rome</option>
+      <option value="Athens">Athens</option>
+      <option value="Istanbul">Istanbul</option>
+    </select>
+
+
+    <div class="options">
+      <input type="radio" name="method" value="fastest" formControlName="method" id="fastest"><label for="fastest">fastest</label>
+      <input type="radio" name="method" value="cheapest" formControlName="method" id="cheapest"><label for="cheapest">cheapest</label>
+    </div>
+
+    <button type="submit">search</button>
+
+
+  </form>
+
+
+</div>
